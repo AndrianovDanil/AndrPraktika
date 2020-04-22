@@ -27,7 +27,7 @@ namespace AndrPraktika000
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            MessageBox.Show("Hello, world!", "Сообщение");
         }
     }
 }
