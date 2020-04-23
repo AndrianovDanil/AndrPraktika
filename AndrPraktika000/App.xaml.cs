@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModuleApplicationProto;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace AndrPraktika000
     /// </summary>
     public partial class App : Application
     {
+        ILogger logger = new Logger();
     }
 }
