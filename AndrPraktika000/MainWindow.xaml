@@ -5,12 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AndrPraktika000"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="42" Width="64" Click="Button_Click"/>
-        <Menu Margin="32,75,223,120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="42" Margin="69,0,0,0" VerticalAlignment="Top" Width="63"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="42" Margin="137,0,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="10,544,0,0" VerticalAlignment="Top" Height="30" Width="61"/>
+        <Menu Margin="30,27,30,505" Visibility="Visible">
+            <MenuItem ToolTip="Открывает модули программы" Header="Модули">
+                <Separator></Separator>
+            </MenuItem>
+            <MenuItem ToolTip=" Позволяет изменять настройки главного окна" Header="Настройки" Click="Button_Click1">
+            </MenuItem>
+            <MenuItem ToolTip="Сведения о программе" Header="О программе" Click="Button_Click2">
+            </MenuItem>
+            <MenuItem ToolTip=" Позволяет добавить текстовый файл "  Header="Добавить текстовый файл" Click="newbutton">
+            </MenuItem>
+            <MenuItem ToolTip=" Позволяет открыть текстовый файл "  Header="Открыть текстовый файл" Click="newbutton1">
+            </MenuItem>
+        </Menu>
 
+        <WrapPanel Margin="30,111,30,79" >
+            <ListBox x:Name="Andr" Height="50" Width="383"/>
+            <TextBox x:Name="textbox" Height="129" Width="383" TextChanged="textbox_TextChanged"/>
+        </WrapPanel>
     </Grid>
 </Window>
