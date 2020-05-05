@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Color = System.Windows.Media.Color;
 
 namespace AndrPraktika000
 {
@@ -27,18 +28,19 @@ namespace AndrPraktika000
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_FON(object sender, RoutedEventArgs e)
         {
-
+            Random r = new Random();
+            Brush brush = new SolidColorBrush(Color.FromRgb((byte)r.Next(1, 255), (byte)r.Next(1, 255), (byte)r.Next(1, 233)));
+            Background = brush;
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            Settings taskWindow = new Settings();
-            taskWindow.Show();
+
         }
 
-        private void Button_Click2(object sender, RoutedEventArgs e)
+        private void Button_Programm(object sender, RoutedEventArgs e)
         {
             var sb = new StringBuilder();
             sb.AppendLine("Группа 9ИСП-391к-17");
@@ -49,12 +51,14 @@ namespace AndrPraktika000
             MessageBox.Show(sb.ToString());
         }
 
-        private void Button_Click3(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            WrapPanel wrapPanel = new WrapPanel();
-            MessageBox.Show("Поле очищено");
+            if (stackPanelAdd.Children.Count > 0)
+            {
+                stackPanelAdd.Children.RemoveAt(stackPanelAdd.Children.Count - 1);
+            }
         }
-        private void newbutton(object sender, RoutedEventArgs e)
+        private void Button_TXT1(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
@@ -66,7 +70,7 @@ namespace AndrPraktika000
                     Andr.Items.Add(System.IO.Path.GetFileName(filename));
             }
         }
-        private void newbutton1(object sender, RoutedEventArgs e)
+        private void Button_TXT(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
@@ -76,5 +80,25 @@ namespace AndrPraktika000
         {
 
         }
+        private void Button_PNG(object sender, RoutedEventArgs e)
+        {
+            StackPanel sp = new StackPanel();
+            Image tb = new Image();
+            sp.Children.Add(tb);
+            stackPanelAdd.Children.Add(sp);
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "Image files (*.BMP, *.JPG, *.GIF, *.TIF, *.PNG, *.ICO, *.EMF, *.WMF)|*.bmp;*.jpg;*.gif; *.tif; *.png; *.ico; *.emf; *.wmf";
+            if (openDialog.ShowDialog() == true)
+            {
+                tb.Source = new BitmapImage(new Uri(openDialog.FileName));
+            }
+        }
+        private void Button_MP3(object sender, RoutedEventArgs e)
+        {
+            MP3_PLAYER taskWindow = new MP3_PLAYER();
+            taskWindow.Owner = this;
+            taskWindow.Show();
+        }
     }
+
 }
