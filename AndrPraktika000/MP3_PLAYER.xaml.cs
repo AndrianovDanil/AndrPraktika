@@ -21,7 +21,7 @@ namespace AndrPraktika000
         }
         MediaPlayer mediaPlayer = new MediaPlayer();
         string filename;
-        private void Button_ClickOpen(object sender, RoutedEventArgs e)
+        private void Button_Open(object sender, RoutedEventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog
             {

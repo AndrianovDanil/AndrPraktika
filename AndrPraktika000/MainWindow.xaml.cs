@@ -58,23 +58,15 @@ namespace AndrPraktika000
                 stackPanelAdd.Children.RemoveAt(stackPanelAdd.Children.Count - 1);
             }
         }
-        private void Button_TXT1(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = true;
-            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            if (openFileDialog.ShowDialog() == true)
-            {
-                foreach (string filename in openFileDialog.FileNames)
-                    Andr.Items.Add(System.IO.Path.GetFileName(filename));
-            }
-        }
         private void Button_TXT(object sender, RoutedEventArgs e)
         {
+            StackPanel sp = new StackPanel();
+            TextBox tb = new TextBox();
+            sp.Children.Add(tb);
+            stackPanelAdd.Children.Add(sp);
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
-                textbox.Text = File.ReadAllText(openFileDialog.FileName);
+                tb.Text = File.ReadAllText(openFileDialog.FileName);
         }
         private void textbox_TextChanged(object sender, TextChangedEventArgs e)
         {

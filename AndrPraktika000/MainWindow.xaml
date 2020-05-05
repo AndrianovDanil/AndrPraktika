@@ -5,30 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AndrPraktika000"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="Главное окно" Height="600" Width="800">
     <Grid>
         <Button Content="Очистить" HorizontalAlignment="Left" Margin="30,526,0,0" VerticalAlignment="Top" Height="25" Width="740" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Menu Margin="30,27,30,505" Visibility="Visible">
-            <MenuItem  Header="Модули">
+        <Menu Margin="30,27,24,497" Visibility="Visible">
+            <MenuItem Header="Модули" Width="76">
                 <Separator></Separator>
+                <MenuItem Name="mp3" Header="Плеер" Click="Button_MP3">
+                </MenuItem>
+                <MenuItem Header="Открыть изображение" Click="Button_PNG">
+                </MenuItem>
+                <MenuItem Header="Открыть текстовый файл" Click="Button_TXT">
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="О программе" Click="Button_Programm">
+            <MenuItem Header="Настройки" Height="36" Width="103">
+                <Separator></Separator>
+                <MenuItem Header="Фон" Click="Button_FON">
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="Добавить текстовый файл" Click="Button_TXT1">
-            </MenuItem>
-            <MenuItem Header="Открыть текстовый файл" Click="Button_TXT>
-            </MenuItem>
-            <MenuItem Header="Открыть изображение" Click="Button_PNG">
-            </MenuItem>
-            <MenuItem Name="mp3" Header="Плеер" Click="Button_MP3">
-            </MenuItem>
-            <MenuItem Header="Фон" Click="Button_FON">
+            <MenuItem Header="О программе" Click="Button_Programm" Width="108" Height="35">
             </MenuItem>
         </Menu>
-        <StackPanel Name="stackPanelAdd" Margin="0,111,38,84" HorizontalAlignment="Right" Width="467"/>
-        <WrapPanel Margin="30,111,510,79" >
-            <ListBox x:Name="Andr" Height="50" Width="260"/>
-            <TextBox x:Name="textbox" Height="334" Width="260" TextChanged="textbox_TextChanged"/>
-        </WrapPanel>
+        <StackPanel Name="stackPanelAdd" Margin="30,111,38,84" Grid.ColumnSpan="2" >
+        </StackPanel>
+        
     </Grid>
 </Window>
