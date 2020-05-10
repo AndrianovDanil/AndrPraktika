@@ -17,6 +17,8 @@
                 </MenuItem>
                 <MenuItem Header="Открыть текстовый файл" Click="Button_TXT">
                 </MenuItem>
+                <MenuItem Header="Присоединение к БД" Click="BD">
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Настройки" Height="36" Width="103">
                 <Separator></Separator>
@@ -28,6 +30,5 @@
         </Menu>
         <StackPanel Name="stackPanelAdd" Margin="30,111,38,84" Grid.ColumnSpan="2" >
         </StackPanel>
-        
     </Grid>
 </Window>

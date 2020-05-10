@@ -34,7 +34,6 @@ namespace AndrPraktika000
             Brush brush = new SolidColorBrush(Color.FromRgb((byte)r.Next(1, 255), (byte)r.Next(1, 255), (byte)r.Next(1, 233)));
             Background = brush;
         }
-
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
 
@@ -90,6 +89,10 @@ namespace AndrPraktika000
             MP3_PLAYER taskWindow = new MP3_PLAYER();
             taskWindow.Owner = this;
             taskWindow.Show();
+        }
+        private void BD(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 
