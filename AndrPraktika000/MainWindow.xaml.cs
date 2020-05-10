@@ -26,6 +26,8 @@ namespace AndrPraktika000
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void Button_FON(object sender, RoutedEventArgs e)
@@ -92,7 +94,9 @@ namespace AndrPraktika000
         }
         private void BD(object sender, RoutedEventArgs e)
         {
-            
+            Connection taskWindow = new Connection();
+            taskWindow.Owner = this;
+            taskWindow.Show();
         }
     }
 

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Главное окно" Height="600" Width="800">
     <Grid>
-        <Button Content="Очистить" HorizontalAlignment="Left" Margin="30,526,0,0" VerticalAlignment="Top" Height="25" Width="740" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="30,526,0,0" VerticalAlignment="Top" Height="25" Width="65" Click="Button_Click"/>
         <Menu Margin="30,27,24,497" Visibility="Visible">
             <MenuItem Header="Модули" Width="76">
                 <Separator></Separator>
